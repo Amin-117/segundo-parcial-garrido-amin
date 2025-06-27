@@ -13,7 +13,17 @@ const sequelize = new Sequelize(
     }
 );
 
-export default sequelize;
+export default sequelize; 
+
+export const ininntDB = async () =>{
+    try {
+    await sequelize.authenticate();
+    console.log("Conexion exitosa con la base de datos");
+    await sequelize.sync();
+    } catch (error){
+        return console.error("error al conectar a ala base de datos");
+    }
+};
 
 
 
