@@ -11,8 +11,8 @@ import {
 
 const routesMovies = express.Router();
 
-    routesMovies.get("/", createMovie);
-    routesMovies.get("/", getAllMovies);
+    routesMovies.post("/", createMovie);
+    routesMovies.get("/getAlll", getAllMovies);
     routesMovies.get("/:id", getMovieById);
     routesMovies.put("/:id", updateMovie);
     routesMovies.delete("/:id", deleteMovie);
