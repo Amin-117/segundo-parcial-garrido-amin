@@ -19,7 +19,7 @@ export default sequelize; async () =>{
     console.log("Conexion exitosa con la base de datos");
     await sequelize.sync();
     } catch (error){
-        return console.error("error al conectar a ala base de datos";)
+        return console.error("error al conectar a ala base de datos");
     }
 };
 
