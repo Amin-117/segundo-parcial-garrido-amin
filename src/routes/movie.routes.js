@@ -7,14 +7,14 @@ import {
     getMovieById,
     updateMovie,
     deleteMovie,
-} from "./movie.controllers.js"
+} from "../controllers/movie.controllers.js"
 
-const routes = express.Router (
-    routes.get("/", createMovie),
-    routes.get("/", getAllMovies),
-    routes.get("/:id", getMovieById),
-    routes.put("/:id", updateMovie),
-    routes.delete("/:id", deleteMovie),
-)
+const routesMovies = express.Router();
 
-export default routes;
+    routesMovies.get("/", createMovie);
+    routesMovies.get("/", getAllMovies);
+    routesMovies.get("/:id", getMovieById);
+    routesMovies.put("/:id", updateMovie);
+    routesMovies.delete("/:id", deleteMovie);
+
+export default routesMovies;
