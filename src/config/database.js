@@ -13,7 +13,9 @@ const sequelize = new Sequelize(
     }
 );
 
-export default sequelize; async () =>{
+export default sequelize; 
+
+export const ininntDB = async () =>{
     try {
     await sequelize.authenticate();
     console.log("Conexion exitosa con la base de datos");
